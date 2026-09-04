@@ -1,0 +1,151 @@
+.catalog-experience-page {
+  min-height: 100vh;
+  padding: 100px 32px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Badge Disponible */
+.badge-disponible {
+  position: absolute;
+  top: 100px;
+  right: 48px;
+  z-index: 20;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--silver-dark);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass-bg);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border);
+}
+
+.badge-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+  animation: pulseGlow 2s infinite;
+}
+
+/* Selector de variantes */
+.catalog-color-pills {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  z-index: 20;
+}
+
+.color-pill-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--silver);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+}
+
+.color-pill-item:hover {
+  background: var(--glass-border-hover);
+  color: #fff;
+}
+
+.color-pill-item.active {
+  color: #fff;
+}
+
+.pill-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Hero Section */
+.catalog-hero-3d {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: visible;
+  padding: 20px 0;
+}
+
+.catalog-hero__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr;
+  align-items: center;
+  gap: 24px;
+  overflow: visible;
+}
+
+.viewer-central-stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  transition: background var(--transition-slow);
+}
+
+/* Toast */
+.catalog-toast {
+  position: fixed;
+  top: 90px;
+  right: 32px;
+  background: var(--accent-green);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .catalog-hero__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .badge-disponible {
+    position: static;
+    margin: 0 auto 16px;
+    width: fit-content;
+  }
+}
