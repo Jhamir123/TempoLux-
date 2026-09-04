@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 /**
  * Hook personalizado para manejar la escena Three.js con carga de modelos .glb (Rolex Datejust)
  */
-export function useThreeJS(modelUrl = '/rolex_datejust.glb', options = {}) {
+export function useThreeJS(modelUrl = `${import.meta.env.BASE_URL}rolex_datejust.glb`, options = {}) {
   const containerRef = useRef(null);
   const sceneRef = useRef(null);
   const rendererRef = useRef(null);

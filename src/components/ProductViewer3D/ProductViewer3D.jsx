@@ -3,7 +3,7 @@ import { useThreeJS } from '../../hooks/useThreeJS';
 import './ProductViewer3D.css';
 
 export default function ProductViewer3D({ 
-  modelPath = '/rolex_datejust.glb', 
+  modelPath = `${import.meta.env.BASE_URL}rolex_datejust.glb`, 
   dialColor = '#00C853',
   accentColorHex = '#00C853',
   onPrev, 
